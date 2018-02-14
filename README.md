@@ -9,7 +9,7 @@ $ cd <path to repo>
 $ python3 -m venv venv
 $ python3 source venv/bin/activate
 <venv>$ pip3 install -r requirements.txt
-<venv>$ python3 analyzer.py
+<venv>$ python3 app/analyzer.py
 ```
 
 And away we go!
