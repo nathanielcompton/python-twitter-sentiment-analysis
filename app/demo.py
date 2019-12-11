@@ -37,11 +37,15 @@ def whoami():
     help="Search language, in ISO 639-1 format"
 )
 def analyze(keyword, language):
+    click.secho(f"Searching for tweets containing: '{keyword}'", fg="green")
     tweepy = TweepyClient()
     tweets = tweepy.get_tweets(keyword=keyword, language=language)
+    total_num = len(tweets)
+    current_num = 1
     for tweet in tweets:
-        click.echo("\n" + "User: " + tweet._json['user']['screen_name'])
-        click.echo("Tweet Text: " + tweet._json['text'])
+        click.secho(f"\n({current_num}/{total_num}) Tweet Data:", fg="cyan")
+        click.echo(f"• Screen Name: {tweet._json['user']['screen_name']}")
+        click.echo(f"• Tweet Text: {tweet._json['text']}")
         # Sentiment Analysis
         tbc = TextBlobClient()
         analysis = tbc.analyze_tweet(tweet._json['text'])
@@ -52,8 +56,10 @@ def analyze(keyword, language):
         very subjective.
         """
 
-        click.echo("Analysis:")
-        click.echo(analysis.sentiment)
+        click.secho("Sentiment Analysis:", fg="yellow")
+        click.echo(f"• Polarity: {analysis.sentiment[0]}")
+        click.echo(f"• Subjectivity: {analysis.sentiment[1]}")
+        current_num += 1
 
 
 if __name__ == "__main__":

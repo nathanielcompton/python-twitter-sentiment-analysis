@@ -1,4 +1,4 @@
-""" This should eventually lives in a dedicated data layer. Until that implementation, it will live here."""
+""" This should eventually live in a dedicated data layer."""
 
 ISO_639 = (
     "aa", "ab", "af", "ak", "sq", "am", "ar", "an", "hy", "as", "av", "ae", "ay", "az", "ba", "bm", "eu", "be", "bn",
