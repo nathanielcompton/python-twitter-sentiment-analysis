@@ -1,9 +1,9 @@
 # Twitter Sentiment Analysis
 
-Leveraging Python's `tweepy` and `textblob` libraries.
+Tweet sentiment analysis from the command line, using Python's `tweepy`, `textblob`, and `click` libraries.
 
 ### Installation and Usage
-```
+```bash
 $ git clone <repo URL>
 $ cd <path to repo>
 $ python3 -m venv venv
