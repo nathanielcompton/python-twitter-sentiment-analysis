@@ -18,13 +18,17 @@ mccabe==0.6.1
 more-itertools==8.0.2
 nltk==3.4.5
 oauthlib==2.0.6
+packaging==19.2
 parso==0.5.1
 pathspec==0.6.0
 pluggy==0.13.1
+py==1.8.0
 pycodestyle==2.5.0
 pydocstyle==5.0.1
 pyflakes==2.1.1
 pylint==2.4.4
+pyparsing==2.4.5
+pytest==5.3.1
 python-jsonrpc-server==0.3.2
 python-language-server==0.31.2
 regex==2019.12.9
@@ -39,6 +43,7 @@ tweepy==3.5.0
 typed-ast==1.4.0
 ujson==1.35
 urllib3==1.25.7
+wcwidth==0.1.7
 wrapt==1.11.2
 yapf==0.29.0
 zipp==0.6.0

@@ -1,6 +1,6 @@
 import tweepy
 from textblob import TextBlob
-from config import (
+from settings import (
     TWITTER_CONSUMER_KEY,
     TWITTER_CONSUMER_SECRET,
     TWITTER_ACCESS_TOKEN,
