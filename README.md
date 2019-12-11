@@ -1,5 +1,9 @@
 # Twitter Sentiment Analysis
-![PyPI - Python Version](https://img.shields.io/badge/python-3.5.0-blue.svg)
+[![PyPI - Python Version](https://img.shields.io/badge/python-3.5.0-blue.svg)](https://www.python.org/downloads/release/python-350/)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+[![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://black.readthedocs.io/en/stable/)
+
+
 Tweet sentiment analysis from the command line, built in Python and implemented with [tweepy], [textblob], and [click].
 
 ### Installation
