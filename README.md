@@ -4,7 +4,7 @@
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://black.readthedocs.io/en/stable/)
 
 
-Tweet sentiment analysis from the command line, built in Python and implemented with [tweepy], [textblob], and [click].
+Tweet sentiment analysis from the command line, built in Python and implemented with [Tweepy], [Textblob], and [Click].
 
 ### Installation
 This repository uses Python 3.5+. For now, also use virtualenv.
@@ -26,7 +26,7 @@ Once installation is complete, using this tool is as simple as calling:
 ```bash
 <venv>$ python src/main.py [COMMAND] [OPTIONAL FLAGS]
 ```
-Reference Click and Tweepy documentation as needed to understand
+Reference the [Click] and [Tweepy] documentation as needed to grok advanced usage.
 
 ### Development and Testing
 Use [Pytest] for testing and [Black] for formatting/styling code.
@@ -38,9 +38,9 @@ Run tests by calling:
 
 N.B. Pytest configuration is in [pytest.ini](pytest.ini). Black configuration is in [pyproject.toml](pyproject.toml).
 
-[tweepy]: https://tweepy.readthedocs.io/en/latest/
-[textblob]: https://textblob.readthedocs.io/en/dev/
-[click]: https://click.palletsprojects.com/en/7.x/
+[Tweepy]: https://tweepy.readthedocs.io/en/latest/
+[Textblob]: https://textblob.readthedocs.io/en/dev/
+[Click]: https://click.palletsprojects.com/en/7.x/
 [Twitter Developer Portal]: https://developer.twitter.com/en/apps
 [Pytest]: https://docs.pytest.org/en/latest/
 [Black]: https://black.readthedocs.io/en/stable/
