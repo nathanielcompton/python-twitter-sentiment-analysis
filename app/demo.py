@@ -6,7 +6,7 @@ from models import TweepyClient, TextBlobClient
 @click.option('--keyword', '-k', prompt='Twitter search', help='Keyword for Twitter search.')
 def search_and_analyze(keyword):
     api = TweepyClient()
-    tweets = api.get_tweets(keyword)
+    tweets = api.get_tweets(keyword=keyword)
     for tweet in tweets:
         click.echo(tweet.items())
 

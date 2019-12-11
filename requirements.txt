@@ -28,7 +28,9 @@ pydocstyle==5.0.1
 pyflakes==2.1.1
 pylint==2.4.4
 pyparsing==2.4.5
+PySocks==1.7.1
 pytest==5.3.1
+python-dotenv==0.10.3
 python-jsonrpc-server==0.3.2
 python-language-server==0.31.2
 regex==2019.12.9
@@ -37,9 +39,9 @@ requests-oauthlib==0.8.0
 rope==0.14.0
 six==1.13.0
 snowballstemmer==2.0.0
-textblob==0.15.1
+textblob==0.15.3
 toml==0.10.0
-tweepy==3.5.0
+tweepy==3.8.0
 typed-ast==1.4.0
 ujson==1.35
 urllib3==1.25.7

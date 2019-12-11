@@ -8,7 +8,7 @@ This repository uses Python 3.5+. For now, also use virtualenv.
 ```bash
 $ git clone {repo URL}
 $ cd tweepy_sentiment_demo
-$ cp .env_template .env
+$ cp .env.example .env
 $ python -m venv venv
 $ source venv/bin/activate
 <venv>$ pip install -r requirements.txt
