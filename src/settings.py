@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import os
 from pathlib import Path
 from dotenv import load_dotenv
@@ -12,6 +15,7 @@ else:
     load_dotenv(dotenv_path=ENV_PATH)
 
 DEFAULT_LANG = "en"
+PROG_NAME = "Twitter Sentiment Analysis: Command Line Interface"
 
 # Configurable via `.env`
 TWITTER_CONSUMER_KEY = os.getenv("TWITTER_CONSUMER_KEY")

@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import tweepy
 from typing import Dict
 from textblob import TextBlob
@@ -22,9 +25,9 @@ class TweepyClient:
     def whoami(self) -> Dict[str, str]:
         res = self.api.me()
         return {
-            'name': res.name,
-            'screen_name': res.screen_name,
-            'description': res.description
+            "name": res.name,
+            "screen_name": res.screen_name,
+            "description": res.description,
         }
 
 

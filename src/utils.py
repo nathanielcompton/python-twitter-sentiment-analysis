@@ -1,16 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""
-A top-level conftest.py forces Pytest to append all Python files in subdirectories to the Python path.
-This provides the convenience of running `pytest` from the directory's top-level.
-"""
-import pytest
+import click
 
 
-@pytest.fixture(scope="module")
-def iso_639_fixture():
-    return (
+def _validate_iso_639(ctx, param, lang_code: str) -> str:
+    """
+        Ensure that a given two-character code matches expected ISO 639-1 standards.
+        This data should eventually live in a dedicated data layer.
+    """
+    ISO_639 = (
         "aa", "ab", "af", "ak", "sq", "am", "ar", "an", "hy", "as", "av", "ae", "ay", "az", "ba", "bm", "eu", "be",
         "bn", "bh", "bi", "bs", "br", "bg", "my", "ca", "ch", "ce", "zh", "cu", "cv", "kw", "co", "cr", "cs", "da",
         "dv", "nl", "dz", "en", "eo", "et", "ee", "fo", "fj", "fi", "fr", "fy", "ff", "ka", "de", "gd", "ga", "gl",
@@ -23,3 +22,7 @@ def iso_639_fixture():
         "ti", "to", "tn", "ts", "tk", "tr", "tw", "ug", "uk", "ur", "uz", "ve", "vi", "vo", "cy", "wa", "wo", "xh",
         "yi", "yo", "za", "zu"
     )
+    if lang_code not in ISO_639:
+        raise click.BadParameter("Language must be ISO 639-1 format.")
+    else:
+        return lang_code

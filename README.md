@@ -1,8 +1,8 @@
 # Twitter Sentiment Analysis
-
+![PyPI - Python Version](https://img.shields.io/badge/python-3.5.0-blue.svg)
 Tweet sentiment analysis from the command line, built in Python and implemented with [tweepy], [textblob], and [click].
 
-### Installation and Usage
+### Installation
 This repository uses Python 3.5+. For now, also use virtualenv.
 
 ```bash
@@ -12,10 +12,17 @@ $ cp .env.example .env
 $ python -m venv venv
 $ source venv/bin/activate
 <venv>$ pip install -r requirements.txt
-<venv>$ python app/demo.py
 ```
 
-You will need to Twitter API keys and access tokens for the environment variables in `.env`. These keys and tokens are generated in the [Twitter Developer Portal].
+You will need to Twitter API keys and access tokens for the environment variables in `.env`.
+These keys and tokens are generated in the [Twitter Developer Portal].
+
+### Usage
+Once installation is complete, using this tool is as simple as calling:
+```bash
+<venv>$ python src/main.py [COMMAND] [OPTIONAL FLAGS]
+```
+Reference Click and Tweepy documentation as needed to understand
 
 ### Development and Testing
 Use [Pytest] for testing and [Black] for formatting/styling code.
@@ -25,7 +32,7 @@ Run tests by calling:
 <venv>$ pytest
 ```
 
-N.B. [pytest.ini](pytest.ini) contains Pytest configuration.
+N.B. Pytest configuration is in [pytest.ini](pytest.ini). Black configuration is in [pyproject.toml](pyproject.toml).
 
 [tweepy]: https://tweepy.readthedocs.io/en/latest/
 [textblob]: https://textblob.readthedocs.io/en/dev/
