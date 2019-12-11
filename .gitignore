@@ -97,6 +97,11 @@ ENV/
 # mkdocs documentation
 /site
 
+# pytest
+.pytest_cache
+htmlcov/
+.coverage
+
 # mypy
 .mypy_cache/
 

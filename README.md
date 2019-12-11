@@ -20,6 +20,13 @@ You will need to Twitter API keys and access tokens for the environment variable
 ### Development and Testing
 Use [Pytest] for testing and [Black] for formatting/styling code.
 
+Run tests by calling:
+```bash
+<venv>$ pytest
+```
+
+N.B. [pytest.ini](pytest.ini) contains Pytest configuration.
+
 [tweepy]: https://tweepy.readthedocs.io/en/latest/
 [textblob]: https://textblob.readthedocs.io/en/dev/
 [click]: https://click.palletsprojects.com/en/7.x/

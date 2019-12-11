@@ -1,14 +1,31 @@
 import click
 from models import TweepyClient, TextBlobClient
+from utils import validate_iso_639
+from settings import DEFAULT_LANG
 
 
 @click.command()
-@click.option('--keyword', '-k', prompt='Twitter search', help='Keyword for Twitter search.')
-def search_and_analyze(keyword):
+@click.option(
+    "--keyword",
+    "-k",
+    type=click.STRING,
+    required=True,
+    prompt="Twitter search",
+    help="Keyword for Twitter search",
+)
+@click.option(
+    "--language",
+    "-l",
+    type=click.STRING,
+    default=DEFAULT_LANG,
+    callback=validate_iso_639,
+    help="Search language, in ISO 639-1 format"
+)
+def search_and_analyze(keyword, language):
     api = TweepyClient()
-    tweets = api.get_tweets(keyword=keyword)
+    tweets = api.get_tweets(keyword=keyword, language=language)
     for tweet in tweets:
-        click.echo(tweet.items())
+        click.echo(tweet)
 
 
 # # Sentiment Analysis
@@ -24,5 +41,5 @@ def search_and_analyze(keyword):
 #     analysis = TextBlob(tweet.text)
 #     print("    Sentiment Analysis:", analysis.sentiment)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     search_and_analyze()

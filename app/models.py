@@ -15,8 +15,8 @@ class TweepyClient:
         self.auth.set_access_token(TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET)
         self.api = tweepy.API(self.auth)
 
-    def get_tweets(self, keyword: str = None):
-        return self.api.search(keyword)
+    def get_tweets(self, keyword: str, language: str):
+        return self.api.search(q=keyword, lang=language)
 
 
 class TextBlobClient:
