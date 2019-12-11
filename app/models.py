@@ -1,4 +1,5 @@
 import tweepy
+from typing import Dict
 from textblob import TextBlob
 from settings import (
     TWITTER_CONSUMER_KEY,
@@ -18,7 +19,15 @@ class TweepyClient:
     def get_tweets(self, keyword: str, language: str):
         return self.api.search(q=keyword, lang=language)
 
+    def whoami(self) -> Dict[str, str]:
+        res = self.api.me()
+        return {
+            'name': res.name,
+            'screen_name': res.screen_name,
+            'description': res.description
+        }
+
 
 class TextBlobClient:
-    def analyze_tweet(tweet):
-        return TextBlob(tweet.text)
+    def analyze_tweet(self, text: str):
+        return TextBlob(text)

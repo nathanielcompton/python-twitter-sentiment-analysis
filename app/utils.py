@@ -1,5 +1,5 @@
 import click
-from app.constants import ISO_639
+from constants import ISO_639
 
 
 def validate_iso_639(ctx, param, lang_code: str) -> str:
