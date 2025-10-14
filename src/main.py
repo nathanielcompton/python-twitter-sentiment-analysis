@@ -8,7 +8,7 @@ from settings import DEFAULT_LANG, PROG_NAME
 
 
 @click.group()
-@click.version_option(version="0.2", prog_name=PROG_NAME)
+@click.version_option(version="0.8", prog_name=PROG_NAME)
 def cli():
     pass
 
@@ -26,7 +26,12 @@ def whoami():
 
 @cli.command(short_help="Search for tweets and analyze sentiment.")
 @click.option(
-    "--keyword", "-k", type=click.STRING, required=True, prompt="Twitter search", help="Keyword for Twitter search",
+    "--keyword",
+    "-k",
+    type=click.STRING,
+    required=True,
+    prompt="Twitter search",
+    help="Keyword for Twitter search",
 )
 @click.option(
     "--language",
@@ -38,8 +43,8 @@ def whoami():
 )
 def analyze(keyword, language):
     """
-        Perform sentment analysis for given Twitter keyword search.
-        Reference Tweepy's API.search() docs as needed for input customization.
+    Perform sentment analysis for given Twitter keyword search.
+    Reference Tweepy's API.search() docs as needed for input customization.
     """
     click.secho(f"Searching for tweets containing: '{keyword}'", fg="green")
     tweepy = TweepyClient()

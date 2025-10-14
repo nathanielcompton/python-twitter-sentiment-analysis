@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 
-# Edit as needed (e.g. if you `mv .env`)
+# Edit as needed
 DOT_ENV_FILENAME = ".env"
 ENV_PATH = Path(__file__).resolve().parents[1] / DOT_ENV_FILENAME
 
